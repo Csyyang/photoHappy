@@ -5,7 +5,7 @@ import App from "pages/App/App";
 
 export default createBrowserRouter([
     {
-        path: "/index",
+        path: "/",
         element: <Index />
     },
     {
