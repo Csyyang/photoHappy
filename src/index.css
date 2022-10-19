@@ -1,8 +1,81 @@
-body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0} 
-a{color:#2d374b;text-decoration:none} 
-a:hover{color:#cd0200;text-decoration:underline} 
-em{font-style:normal} 
-li{list-style:none} 
-img{border:0;vertical-align:middle} 
-table{border-collapse:collapse;border-spacing:0} 
-p{word-wrap:break-word} 
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    box-sizing: border-box;
+}
+a {
+    color: #2d374b;
+    text-decoration: none;
+}
+a:hover {
+    color: #cd0200;
+    text-decoration: underline;
+}
+em {
+    font-style: normal;
+}
+li {
+    list-style: none;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+p {
+    word-wrap: break-word;
+}
+
+#root > div {
+    width: 100vw;
+    height: 100vh;
+}
+
+.ft12 {
+    font-size: 12px;
+}
+
+.ft14 {
+    font-size: 14px;
+}
+
+.ft15 {
+    font-size: 15px;
+}
+
+.ft16 {
+    font-size: 16px;
+}
+
+.ft18 {
+    font-size: 18px;
+}
+
+.all_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
