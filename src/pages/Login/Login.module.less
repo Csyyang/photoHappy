@@ -1,0 +1,51 @@
+.login {
+    .title {
+        font-size: 26px;
+        text-align: center;
+        font-weight: 600;
+        margin: 65px 0;
+    }
+
+    .input_box {
+        width: 300px;
+        margin: 0 auto;
+
+        .input_flex {
+            display: flex;
+            align-items: center;
+            padding: 17px 16px;
+            background-color: #F5F5F5;
+            border-radius: 50px;
+            margin-bottom: 21px;
+
+            &:nth-child(2) {
+                padding: 11px 16px;
+            }
+
+            .fenge {
+                margin: 0 10px;
+            }
+
+            input {
+                background-color: #F5F5F5;
+            }
+        }
+
+        :global {
+            .adm-button {
+                font-size: var(--adm-font-size-4);
+            }
+        }
+    }
+
+    .tips {
+        text-align: center;
+        color: #C8C8C8;
+        font-size: var(--adm-font-size-5);
+    }
+
+    .button_box {
+        width: 300px;
+        margin: 30px auto 0;
+    }
+}

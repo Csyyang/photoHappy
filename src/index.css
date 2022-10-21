@@ -20,9 +20,14 @@ textarea,
 select {
     margin: 0;
     padding: 0;
-    color: #fff;
+    color: #101010;
     box-sizing: border-box;
 }
+input {
+    border: none;
+    outline:0;
+}
+
 a {
     color: #2d374b;
     text-decoration: none;
@@ -54,6 +59,12 @@ p {
     height: 100vh;
 }
 
+.cor_fff {
+    color: #fff;
+}
+
+
+
 .ft12 {
     font-size: 12px;
 }
@@ -78,4 +89,9 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.adm-button-primary {
+    --color: #101010;
 }
