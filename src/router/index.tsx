@@ -1,13 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import Index from "@/pages/Start/Start";
+import Start from "@/pages/Start/Start";
 import App from "pages/App/App";
 import Login from "pages/Login/Login";
+import Index from "@/pages/Index/Index";
 
 export default createBrowserRouter([
     {
         path: "/",
-        element: <Index />
+        element: <Start />
     },
     {
         path: "/app",
@@ -16,6 +17,10 @@ export default createBrowserRouter([
     {
         path: "/login",
         element: <Login />
+    },
+    {
+        path: '/index',
+        element: <Index />
     }
 
 ])

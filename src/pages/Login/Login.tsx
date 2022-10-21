@@ -5,10 +5,12 @@ import less from './Login.module.less'
 import { Image, Button } from 'antd-mobile'
 import phone from 'imgs/phone.png'
 import password from 'imgs/password.png'
+import { useNavigate } from "react-router-dom"
 
 const Login: React.FC = () => {
     const [address, setAddress] = useState('')
     const [code, setCode] = useState('')
+    const navigate = useNavigate()
 
     return (
         <div className={less.login}>
@@ -28,7 +30,7 @@ const Login: React.FC = () => {
             <p className={less.tips}>未注册的手机号验证后自动创建摄图账号</p>
 
             <div className={less.button_box}>
-                <Button color='primary' fill='solid' shape='rounded' size='large' block>登录</Button>
+                <Button color='primary' fill='solid' shape='rounded' size='large' block onClick={() => { navigate('/index') }}>登录</Button>
             </div>
         </div>
     )
