@@ -1,11 +1,54 @@
-.index {
-    .main {
-        padding: 0 15px;
-        overflow: hidden;
-        .img_box {
-            padding: 0 5px;
-            float: left;
-            margin-bottom: 20px;
+.my_masonry_grid {
+    display: flex;
+    margin-left: 20px;
+    /* gutter size offset */
+    margin-right: 20px;
+    /* gutter size offset */
+    width: auto;
+}
+
+.my_masonry_grid_column {
+    // padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+
+    &:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+}
+
+/* Style your items */
+.my_masonry_grid_column>div {
+    /* change div to reference your elements you put in <Masonry> */
+    margin-bottom: 30px;
+}
+
+
+.img_box {
+    .img {
+        border-radius: 8px;
+    }
+
+    .title {
+        color: #010101;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 14px;
+        margin-bottom: 6px;
+    }
+
+    .name_box {
+        display: flex;
+        justify-content: space-between;
+
+        .down {
+            display: flex;
+            align-items: center;
+            .number {
+                color: #d5d5d5;
+                font-size: 12px;
+            }
         }
     }
 }

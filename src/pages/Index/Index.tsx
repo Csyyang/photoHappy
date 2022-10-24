@@ -1,10 +1,11 @@
 import less from './Index.module.less'
 import RHeader from '@/components/RHeader/RHeader'
 import { Image } from 'antd-mobile'
-
+import Masonry from 'react-masonry-css'
 import test1 from 'imgs/test1.jpeg'
 import test2 from 'imgs/tes2.jpeg'
 import test3 from 'imgs/test3.jpeg'
+import download from 'imgs/download.png'
 
 const demoSrc =
     'https://images.unsplash.com/photo-1567945716310-4745a6b7844b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=60'
@@ -12,52 +13,32 @@ const demoSrc2 =
     'https://images.unsplash.com/photo-1620476214170-1d8080f65cdb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=3150&q=80'
 
 const Index: React.FC = () => {
+    const data = [test1, test2, test3, demoSrc, demoSrc2, test1, test2, test3, demoSrc, demoSrc2]
     return (
         <div className={less.index}>
             <RHeader type='search' />
 
-            <div className={less.main}>
+            <Masonry
+                breakpointCols={2}
+                className={less.my_masonry_grid}
+                columnClassName={less.my_masonry_grid_column}>
 
-                <div className={less.img_box}>
-                    <Image className={less.img} src={demoSrc} width={162} fit="fill"></Image>
-                    23
-                </div>
-                <div className={less.img_box}>
-                    <Image src={demoSrc2} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test1} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test2} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test3} width={162} fit="fill"></Image>
-                    233
-                </div>       <div className={less.img_box}>
-                    <Image className={less.img} src={demoSrc} width={162} fit="fill"></Image>
-                    23
-                </div>
-                <div className={less.img_box}>
-                    <Image src={demoSrc2} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test1} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test2} width={162} fit="fill"></Image>
-                    233
-                </div>
-                <div className={less.img_box}>
-                    <Image src={test3} width={162} fit="fill"></Image>
-                    233
-                </div>
-            </div>
+                {
+                    data.map((item, index) => (
+                        <div className={less.img_box} key={item + index}>
+                            <Image className={less.img} src={item} width={162} fit="fill"></Image>
+                            <p className={less.title}>233</p>
+                            <div className={less.name_box}>
+                                <span>Website Back..</span>
+                                <div className={less.down}>
+                                    <Image src={download} width={12} fit="fill"></Image>
+                                    <span className={less.number}>23131</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                }
+            </Masonry>
         </div>
     )
 }
