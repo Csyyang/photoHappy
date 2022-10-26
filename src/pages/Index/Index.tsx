@@ -1,7 +1,6 @@
 import less from './Index.module.less'
 import RHeader from '@/components/RHeader/RHeader'
 import { Image } from 'antd-mobile'
-import Masonry from 'react-masonry-css'
 import RFooter from 'components/RFooter/RFooter'
 
 import test1 from 'imgs/test1.jpeg'
