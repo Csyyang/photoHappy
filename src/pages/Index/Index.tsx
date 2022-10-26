@@ -2,6 +2,8 @@ import less from './Index.module.less'
 import RHeader from '@/components/RHeader/RHeader'
 import { Image } from 'antd-mobile'
 import Masonry from 'react-masonry-css'
+import RFooter from 'components/RFooter/RFooter'
+
 import test1 from 'imgs/test1.jpeg'
 import test2 from 'imgs/tes2.jpeg'
 import test3 from 'imgs/test3.jpeg'
@@ -22,31 +24,9 @@ const Index: React.FC = () => {
         <div className={less.index}>
             <RHeader type='search' />
 
-            {/* <Masonry
-                breakpointCols={2}
-                className={less.my_masonry_grid}
-                columnClassName={less.my_masonry_grid_column}>
+            <Waterfall breakpointCols={2} className={less.my_masonry_grid + ' my_masonry_grid'} imgs={data} />
 
-                {
-                    data.map((item, index) => (
-                        <div className={less.img_box} key={item + index}>
-                            <Image className={less.img} src={item} width={162} fit="fill"></Image>
-                            <p className={less.title}>233</p>
-                            <div className={less.name_box}>
-                                <span>Website Back..</span>
-                                <div className={less.down}>
-                                    <Image src={download} width={12} fit="fill"></Image>
-                                    <span className={less.number}>23131</span>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                }
-            </Masonry> */}
-            <Waterfall breakpointCols={2} className={less.my_masonry_grid} imgs={data} />
-            <button onClick={() => {
-                setData(data.concat(test1))
-            }}>test</button>
+            <RFooter />
         </div>
     )
 }
