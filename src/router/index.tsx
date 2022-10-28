@@ -4,6 +4,7 @@ import Start from "@/pages/Start/Start";
 import App from "pages/App/App";
 import Login from "pages/Login/Login";
 import Index from "@/pages/Index/Index";
+import Search from "@/pages/Search";
 
 export default createBrowserRouter([
     {
@@ -21,6 +22,9 @@ export default createBrowserRouter([
     {
         path: '/index',
         element: <Index />
+    },
+    {
+        path: '/search',
+        element: <Search />
     }
-
 ])

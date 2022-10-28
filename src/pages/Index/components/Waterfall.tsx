@@ -46,8 +46,6 @@ const Waterfall: React.FC<defaultProps> = (props) => {
                     box[0].push(item.src)
                     height[0] = Number((left + Number(item.height.toFixed(2))).toFixed(2)) + 54
                 }
-                console.log(left, right)
-
             })
 
             setBoxState(box)
